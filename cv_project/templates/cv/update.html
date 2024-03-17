@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>tut</title>
+   </head>
+   <body>
+      <form method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+
+         <label><h3>Person</h3></label>
+         //accessing form 1 from view
+         {{ forms.person_form.as_p }}
+         <label><h3>Skills</h3></label>
+         //accessing form 2 from view
+         {{ forms.skills_form.as_p }}
+         <input type="submit" value="submit"/>
+      </form>
+   </body>
+</html>

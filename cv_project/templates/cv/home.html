@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mb-4">
+    <!-- Content here -->
+    <div class="row">
+        {% for person in persons %}
+        <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{person}}</h5>
+                <p class="card-text">{{person.role}}<br>{{person.address}}</p>
+                <a href="{{ person.get_absolute_url }}" class="btn btn-primary">Go detail</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+</div>
+
+{% endblock content %}
